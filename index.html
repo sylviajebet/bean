@@ -30,8 +30,8 @@
                 </div>
                 <div style="display:table-row";>
                     <div style="display:table-cell";><button class="otherBtn" form="esp" onclick='shots = "1";choiceS.value = "1" '>1</button></div>
-                    <div style="display:table-cell";><button class="otherBtn" form="esp" onclick='ounce = "8";choiceO.value = "S" '>S</button></div>
-                    <div style="display:table-cell";><button class="drinkBtn" form="esp" onclick='drink = "espresso";choiceD.value = "Espresso"'>ESPRESSO</button></div>
+                    <div style="display:table-cell";><button class="otherBtn" form="esp" onclick='ounce = "8";choiceO.value = ounce '>S</button></div>
+                    <div style="display:table-cell";><button class="drinkBtn" form="esp" onclick='drink = "espresso";choiceD.value = "espresso"'>ESPRESSO</button></div>
                     <div style="display:table-cell";><button class="lastBtn" form="esp" onclick='
                         var drink = "none";
                         var ounce  = 0;
@@ -44,18 +44,18 @@
                 </div>
                 <div style="display:table-row";>
                     <div style="display:table-cell";><button class="otherBtn" form="esp" onclick='shots = "2";choiceS.value = "2" '>2</button></div>
-                    <div style="display:table-cell";><button class="otherBtn" form="esp" onclick='ounce = "12";choiceO.value = "T"'>T</button></div>
-                    <div style="display:table-cell";><button class="drinkBtn" form="esp" onclick='drink = "latte";choiceD.value = "Latte"'>LATTE</button></div>
+                    <div style="display:table-cell";><button class="otherBtn" form="esp" id="t12" onclick='ounce = "12";choiceO.value = ounce'>T</button></div>
+                    <div style="display:table-cell";><button class="drinkBtn" form="esp" onclick='drink = "latte";choiceD.value = "latte"'>LATTE</button></div>
                     <div style="display:table-cell";></div>
                 </div>
                 <div style="display:table-row";>
                     <div style="display:table-cell";><button class="otherBtn" form="esp" onclick='shots = "3";choiceS.value = "3" '>3</button></div>
-                    <div style="display:table-cell";><button class="otherBtn" form="esp" onclick='ounce = "16";choiceO.value = "G"'>G</button></div>
-                    <div style="display:table-cell";><button class="drinkBtn" form="esp" onclick='drink = "cappuccino";choiceD.value = "Cappuccino"'>CAPPUCCINO</button></div>
+                    <div style="display:table-cell";><button class="otherBtn" form="esp" onclick='ounce = "16";choiceO.value = ounce'>G</button></div>
+                    <div style="display:table-cell";><button class="drinkBtn" form="esp" onclick='drink = "cappuccino";choiceD.value = "cappuccino"'>CAPPUCCINO</button></div>
                     <div style="display:table-cell";><button class="lastBtn" form="esp" onclick='
-                        var drink = "latte";
-                        var ounce  = 12;
-                        var shots = 2;
+                        var drink = choiceD.value;
+                        var ounce = choiceO.value;
+                        var shots = choiceS.value;
                         var taxRate = 0.088;
                         var price;
                         if (drink == "espresso")
