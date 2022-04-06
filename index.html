@@ -11,8 +11,8 @@
             div {margin-left: auto; margin-right: auto; text-align: center;}
             .drinkBtn {width: 150px;}
             .otherBtn {width: 40px;}
-            .lastBtn {width: 60px;}
-            .userBtn {border: solid; border-color: yellow; border-width: 5px;}
+            .lastBtn {width: 60px; margin: 2px;}
+            .userBtn {border: solid; border-color: yellow; border-width: 5px; margin: 5px;}
             .totalDisp {border: solid; border-color: black; border-width: 2px;}
         </style>
     </head>
@@ -23,9 +23,9 @@
         <section>
             <form name="esp">
                 <div style="display:table-row";>
-                    <div style="display:table-cell";><input style="width: 40px" id="choiceS" class="userBtn" form="esp" /></div>
-                    <div style="display:table-cell";><input style="width: 40px" id="choiceO" class="userBtn" form="esp" /></div>
-                    <div style="display:table-cell";><input style="width: 150px" id="choiceD" class="userBtn" form="esp" /></div>
+                    <div style="display:table-cell";><input style="width: 30px" id="choiceS" class="userBtn" form="esp" /></div>
+                    <div style="display:table-cell";><input style="width: 30px" id="choiceO" class="userBtn" form="esp" /></div>
+                    <div style="display:table-cell";><input style="width: 130px" id="choiceD" class="userBtn" form="esp" /></div>
                     <div style="display:table-cell";></div>
                 </div>
                 <div style="display:table-row";>
@@ -36,6 +36,9 @@
                         var drink = "none";
                         var ounce  = 0;
                         var shots = 1;
+                        choiceD.value = "None";
+                        choiceO.value = "None";
+                        choiceS.value = 0;
                         disp.value = 0.00;
                         '>Clear</button></div>
                 </div>
