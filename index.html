@@ -23,19 +23,24 @@
             <form name="esp">
                 <div style="display:table-row";>
                     <div style="display:table-cell";><button class="otherBtn" form="esp" onclick='shots = "1"'>1</button></div>
-                    <div style="display:table-cell";><button class="otherBtn" form="esp">S</button></div>
+                    <div style="display:table-cell";><button class="otherBtn" form="esp" onclick='ounce = "8"'>S</button></div>
                     <div style="display:table-cell";><button class="drinkBtn" form="esp" onclick='drink = "espresso"'>ESPRESSO</button></div>
-                    <div style="display:table-cell";><button class="lastBtn" form="esp">Clear</button></div>
+                    <div style="display:table-cell";><button class="lastBtn" form="esp" onclick='
+                        var drink = "none";
+                        var ounce  = 0;
+                        var shots = 1;
+                        disp.value = 0.00;
+                        '>Clear</button></div>
                 </div>
                 <div style="display:table-row";>
                     <div style="display:table-cell";><button class="otherBtn" form="esp" onclick='shots = "2"'>2</button></div>
-                    <div style="display:table-cell";><button class="otherBtn" form="esp">T</button></div>
+                    <div style="display:table-cell";><button class="otherBtn" form="esp" onclick='ounce = "12"'>T</button></div>
                     <div style="display:table-cell";><button class="drinkBtn" form="esp" onclick='drink = "latte"'>LATTE</button></div>
                     <div style="display:table-cell";></div>
                 </div>
                 <div style="display:table-row";>
                     <div style="display:table-cell";><button class="otherBtn" form="esp" onclick='shots = "3"'>3</button></div>
-                    <div style="display:table-cell";><button class="otherBtn" form="esp">G</button></div>
+                    <div style="display:table-cell";><button class="otherBtn" form="esp" onclick='ounce = "16"'>G</button></div>
                     <div style="display:table-cell";><button class="drinkBtn" form="esp" onclick='drink = "cappuccino"'>CAPPUCCINO</button></div>
                     <div style="display:table-cell";><button class="lastBtn" form="esp" onclick='
                         var drink = "latte";
@@ -57,6 +62,7 @@
                             price = 1.20 + 0.30*(ounce/8);
                         price = price + (shots - 1)*.50;
                         price = price + price*taxRate;
+                        disp.value = (Math.round(price*100)/100).toFixed(2);
                         '>Total</button></div>
                 </div>
                 <div style="display:table-row";>
